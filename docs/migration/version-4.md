@@ -41,7 +41,7 @@ npm install --save-dev jest-yoshi-preset@4
 Previously, every project needed to configure their own Babel presets and rules. While giving projects flexibility, it created duplicated boilerplate and made it harder to create a good experience. Yoshi now configures Babel internally.
 
 If your project is a Babel project, please make sure to remove your `.babelrc` file.  
-**Note** if you have custon configuration - it will not be supported anymore
+**Note** if you have custom babel configuration - it will not be supported anymore
 
 ### `yoshi start` does not run tests by default
 
