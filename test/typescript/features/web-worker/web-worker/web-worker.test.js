@@ -9,9 +9,8 @@ describe.each(['prod', 'dev'])('web-worker [%s]', mode => {
   it('integration', async () => {
     await scripts[mode](async () => {
       await page.goto(`http://localhost:3000`);
-      await page.waitForSelector('h1');
-      expect(await page.$eval('h1', el => el.innerText)).toBe(
-        'hello from a web worker',
+      await page.waitForFunction(
+        `document.querySelector('h1').innerText === 'hello from a web worker'`,
       );
     });
   });

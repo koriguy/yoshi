@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default class WebWorker extends React.Component {
-  state = { messageFromWorker: '' };
+  state = { messageFromWorker: 'Waiting for message' };
   componentDidMount() {
     const myWorker = new Worker('web-worker.js');
     myWorker.onmessage = e => {
@@ -10,10 +10,6 @@ export default class WebWorker extends React.Component {
   }
 
   render() {
-    return this.state.messageFromWorker ? (
-      <h1>{this.state.messageFromWorker}</h1>
-    ) : (
-      <div></div>
-    );
+    return <h1>{this.state.messageFromWorker}</h1>;
   }
 }
