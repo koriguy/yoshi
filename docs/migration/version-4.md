@@ -36,11 +36,12 @@ npm install --save-dev jest-yoshi-preset@4
 
 **Finally, for TypeScript projects, Yoshi now requires TypeScript with a minimum version of 2.9.0.**
 
-### Babel config is no longer needed
+### Babel config is no longer required
 
 Previously, every project needed to configure their own Babel presets and rules. While giving projects flexibility, it created duplicated boilerplate and made it harder to create a good experience. Yoshi now configures Babel internally.
 
-If your project is a Babel project, please make sure to remove your `.babelrc` file.
+If your project is a Babel project, please make sure to remove your `.babelrc` file.  
+**Note** if you have custon configuration - it will not be supported anymore
 
 ### `yoshi start` does not run tests by default
 
