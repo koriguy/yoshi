@@ -1,4 +1,4 @@
-const Scripts = require('../../../scripts');
+const Scripts = require('../../../../scripts');
 
 const scripts = Scripts.setupProjectFromTemplate({
   templateDir: __dirname,
